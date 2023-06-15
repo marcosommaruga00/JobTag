@@ -1,7 +1,7 @@
 import styled from "styled-components/native";
 
 const Title = styled.Text`
-    font-size: 60px;
+    font-size: 20px;
     color: #000;
     text-align: center;
     text-transform: uppercase;
@@ -12,8 +12,8 @@ const Title2 = styled.Text`
     font-size: 40px;
     color: #000;
     text-align: center;
-
     margin-top: 60px;
+    margin-bottom: 30px;
 `;
 
 const BaseText = styled.Text`
@@ -21,7 +21,15 @@ const BaseText = styled.Text`
     color: #000;
     text-align: ${(props) => props.align || "center"};
     text-transform: uppercase;
-    margin-top: 60px;
+`;
+
+const BaseText2 = styled.Text`
+    font-size: 10px;
+    color: #000;
+    text-align: ${(props) => props.align || "center"};
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin: 5px;
 `;
 
 const Label = styled.Text `
@@ -40,4 +48,4 @@ const Input = styled.TextInput `
     justify-content: center;
     `;
 
-export { Label, Title, Input, BaseText, Title2 }
+export { Label, Title, Input, BaseText, BaseText2, Title2 }
