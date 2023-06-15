@@ -18,7 +18,7 @@ export default function Login ({ navigation }) {
                             <Input placeholder="Inserisci la password" secureTextEntry={true}/>
                         </SafeAreaView>
                         <StandardButton onPress={() => navigation.navigate("Home")}>
-                            <Label>Accedi</Label>
+                            <Label>Login</Label>
                         </StandardButton>
                     </View>
                 </View>
