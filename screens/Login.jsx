@@ -7,7 +7,7 @@ const image = {uri: "../assets/bg.png"};
 export default function Login ({ navigation }) {
     return (
         <View>
-            <ImageBackground source={require('../assets/bg.png')} style={{width: '100%', height: '100%'}}>
+            <ImageBackground source={require('../assets/bgHome.png')} style={{width: '100%', height: '100%'}}>
                 
                 <View style={styles.container}>
                     <View style={styles.logo} >
@@ -23,7 +23,7 @@ export default function Login ({ navigation }) {
                             Password dimenticata?
                         </BaseText2>
                         <StandardButton onPress={() => navigation.navigate("Home")}>
-                            <Label>Login</Label>
+                            <Label>Accedi</Label>
                         </StandardButton>
                     </View>
                     <View style={styles.bottom}>
