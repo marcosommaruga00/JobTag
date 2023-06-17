@@ -10,7 +10,20 @@ export default function Detail () {
                 <View style={styles.container}>
                     <View style={styles.logo} >
                         <Image source={require('../assets/logoSmall.png')} style={{width: 138, height: 24, marginTop: 50}}/>
-                        <Entypo name="notification" size={24} color="black" style={{marginTop: 50}}/>
+                        <Entypo name="notification" size={24} color="#142A39" style={{marginTop: 50}}/>
+                    </View>
+                    <View style={styles.center}>
+                        {/* carosello */}
+                        <View style={{flex: 3, borderStyle: 'solid', borderWidth: 1, borderColor: 'yellow', width: 365, height: 218}}>
+                            <BaseText>Carosello persone</BaseText>
+                        </View>
+                        <View style={{flex: 3, borderStyle: 'solid', borderWidth: 1, borderColor: 'blue', width: 365, height: 218}}>
+                        <BaseText>Carosello luoghi</BaseText>
+                        </View>
+                    </View>
+                    <View style={styles.bottom}>
+                        <Ionicons.Button name="call" size={62} /* style={{ zIndex: 3, marginBottom: -98}} */ backgroundColor={'#30D158'} borderRadius={99} color="white" iconStyle={{paddingLeft: 2}}/>
+                        <Image source={require('../assets/menu.png')} style={{width: 390, height: 247}}/>
                     </View>
                 </View>
             </ImageBackground>
@@ -31,4 +44,25 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         width: 320,
     },
+    bottom:{
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'flex-end',
+        marginBottom: 0,
+    },
+    center:{
+        flex: 2,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 0,
+        marginBottom: 150,
+        borderStyle: 'solid',
+        borderWidth: 1,
+        borderColor: 'red',
+        marginLeft: 25,
+        width: 365,
+        height: 436,
+    },
 });
+
+/* backgroundColor={'#30D158'} borderRadius={999} color="white" iconStyle={{paddingLeft: 2}}  */
