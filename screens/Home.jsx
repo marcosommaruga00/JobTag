@@ -2,9 +2,10 @@ import { ImageBackground, StyleSheet, View, Image } from "react-native";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Entypo } from '@expo/vector-icons';
 import { BaseText } from '../components/Text';
-import { IconButton } from "../components/Button";
+import { CallButton } from "../components/Button";
 import { useNavigation } from '@react-navigation/native';
 import Prova from "./Prova";
+import Notification from "./Notification";
 
 
 export default function Home () {
@@ -13,13 +14,16 @@ export default function Home () {
     const goToThirdPage = () => {
         navigation.navigate('Prova');
     };
+    const goToNotification = () => {
+        navigation.navigate('Notification');
+    };
     return (
         <View>
             <ImageBackground source={require('../assets/bg.png')} style={{width: '100%', height: '100%'}}>
                 <View style={styles.container}>
                     <View style={styles.logo} >
                         <Image source={require('../assets/logoSmall.png')} style={{width: 138, height: 24, marginTop: 50}}/>
-                        <Entypo name="notification" size={24} color="#142A39" style={{marginTop: 50}}/>
+                        <Entypo.Button name="notification" size={24} backgroundColor={'transparent'} color="#142A39" style={{marginTop: 38}} onPress={goToNotification}/>
                     </View>
                     <View style={styles.center}>
                         {/* carosello */}
@@ -31,9 +35,9 @@ export default function Home () {
                         </View>
                     </View>
                     <View style={styles.bottom}>
-                        <IconButton onPress={() => navigation.navigate("Prova")} >
+                        <CallButton onPress={() => navigation.navigate("Prova")} >
                             <Ionicons.Button name="call" size={42} backgroundColor={'#30D158'} borderRadius={99} color="white" iconStyle={{paddingLeft: 2}} onPress={goToThirdPage}/>
-                        </IconButton>
+                        </CallButton>
                         <Image source={require('../assets/menu.png')} style={{width: 390, height: 247}}/>
                     </View>
                 </View>
@@ -54,6 +58,7 @@ const styles = StyleSheet.create({
         alignItems: 'left',
         justifyContent: 'space-between',
         width: 320,
+        backgroundColor: 'rgba(255, 255, 255, 0)',
     },
     bottom:{
         flex: 1,

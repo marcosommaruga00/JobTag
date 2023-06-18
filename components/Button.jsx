@@ -9,10 +9,9 @@ const StandardButton = styled.Pressable`
     margin: 10px;
     justify-content: center;
     `;
-
 export { StandardButton };
 
-const IconButton = styled.Pressable`
+const CallButton = styled.Pressable`
     background-color: #30D158;
     width: 79px;
     height: 75px;
@@ -23,4 +22,17 @@ const IconButton = styled.Pressable`
     margin-left: 2px;
     justify-content: center;
     `;
-export { IconButton };
+export { CallButton };
+
+const NotificationButton = styled.Pressable`
+    background-color: #30D158;
+    width: 79px;
+    height: 75px;
+    padding-left: 7px;
+    border-radius: 99px;
+    z-index: 1;
+    margin-bottom: -98px;
+    margin-left: 2px;
+    justify-content: center;
+    `;
+export { NotificationButton };
