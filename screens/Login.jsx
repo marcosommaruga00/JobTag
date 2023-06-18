@@ -1,6 +1,8 @@
 import { StyleSheet, View, ImageBackground, Image, SafeAreaView} from "react-native";
 import { Label, Title, Input, Title2, BaseText2 } from '../components/Text';
-import { StandardButton } from "../components/Button";
+import { StandardButton, IconButton } from "../components/Button";
+import Ionicons from '@expo/vector-icons/Ionicons';
+import Prova from "./Prova";
 
 const image = {uri: "../assets/bg.png"};
 
@@ -25,6 +27,9 @@ export default function Login ({ navigation }) {
                         <StandardButton onPress={() => navigation.navigate("Home")}>
                             <Label>Accedi</Label>
                         </StandardButton>
+                        <IconButton onPress={() => navigation.navigate("Prova")} >
+                            <Ionicons.Button name="call" size={42} backgroundColor={'#30D158'} borderRadius={99} color="white" iconStyle={{paddingLeft: 2}} onPress={Prova}/>
+                        </IconButton>
                     </View>
                     <View style={styles.bottom}>
                         <Image source={require('../assets/menu.png')} style={{width: 390, height: 247}}/>

@@ -11,3 +11,16 @@ const StandardButton = styled.Pressable`
     `;
 
 export { StandardButton };
+
+const IconButton = styled.Pressable`
+    background-color: #30D158;
+    width: 79px;
+    height: 75px;
+    padding-left: 7px;
+    border-radius: 99px;
+    z-index: 1;
+    margin-bottom: -98px;
+    margin-left: 2px;
+    justify-content: center;
+    `;
+export { IconButton };

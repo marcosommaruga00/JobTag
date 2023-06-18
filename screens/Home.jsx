@@ -2,8 +2,10 @@ import { ImageBackground, StyleSheet, View, Image } from "react-native";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Entypo } from '@expo/vector-icons';
 import { BaseText } from '../components/Text';
+import { IconButton } from "../components/Button";
+import Prova from "./Prova";
 
-export default function Detail () {
+export default function Home () {
     return (
         <View>
             <ImageBackground source={require('../assets/bg.png')} style={{width: '100%', height: '100%'}}>
@@ -22,7 +24,9 @@ export default function Detail () {
                         </View>
                     </View>
                     <View style={styles.bottom}>
-                        <Ionicons.Button name="call" size={62} /* style={{ zIndex: 3, marginBottom: -98}} */ backgroundColor={'#30D158'} borderRadius={99} color="white" iconStyle={{paddingLeft: 2}}/>
+                        <IconButton onPress={() => navigation.navigate("Prova")} >
+                            {/* <Ionicons.Button name="call" size={42} backgroundColor={'#30D158'} borderRadius={99} color="white" iconStyle={{paddingLeft: 2}} onPress={Prova}/> */}
+                        </IconButton>
                         <Image source={require('../assets/menu.png')} style={{width: 390, height: 247}}/>
                     </View>
                 </View>
@@ -66,3 +70,4 @@ const styles = StyleSheet.create({
 });
 
 /* backgroundColor={'#30D158'} borderRadius={999} color="white" iconStyle={{paddingLeft: 2}}  */
+/* style={{ zIndex: 3, marginBottom: -98}} */
