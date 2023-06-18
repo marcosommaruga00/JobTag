@@ -27,9 +27,6 @@ export default function Login ({ navigation }) {
                         <StandardButton onPress={() => navigation.navigate("Home")}>
                             <Label>Accedi</Label>
                         </StandardButton>
-                        <IconButton onPress={() => navigation.navigate("Prova")} >
-                            <Ionicons.Button name="call" size={42} backgroundColor={'#30D158'} borderRadius={99} color="white" iconStyle={{paddingLeft: 2}} onPress={Prova}/>
-                        </IconButton>
                     </View>
                     <View style={styles.bottom}>
                         <Image source={require('../assets/menu.png')} style={{width: 390, height: 247}}/>

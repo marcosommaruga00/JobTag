@@ -3,9 +3,16 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { Entypo } from '@expo/vector-icons';
 import { BaseText } from '../components/Text';
 import { IconButton } from "../components/Button";
+import { useNavigation } from '@react-navigation/native';
 import Prova from "./Prova";
 
+
 export default function Home () {
+
+    const navigation = useNavigation();
+    const goToThirdPage = () => {
+        navigation.navigate('Prova');
+    };
     return (
         <View>
             <ImageBackground source={require('../assets/bg.png')} style={{width: '100%', height: '100%'}}>
@@ -25,7 +32,7 @@ export default function Home () {
                     </View>
                     <View style={styles.bottom}>
                         <IconButton onPress={() => navigation.navigate("Prova")} >
-                            {/* <Ionicons.Button name="call" size={42} backgroundColor={'#30D158'} borderRadius={99} color="white" iconStyle={{paddingLeft: 2}} onPress={Prova}/> */}
+                            <Ionicons.Button name="call" size={42} backgroundColor={'#30D158'} borderRadius={99} color="white" iconStyle={{paddingLeft: 2}} onPress={goToThirdPage}/>
                         </IconButton>
                         <Image source={require('../assets/menu.png')} style={{width: 390, height: 247}}/>
                     </View>
