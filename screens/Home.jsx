@@ -56,10 +56,13 @@ export default function Home () {
                 <View style={styles.container}>
                     <View style={styles.logo} >
                         <Image source={require('../assets/logoSmall.png')} style={{width: 138, height: 24, marginTop: 50}}/>
-                        <Entypo.Button name="notification" size={24} backgroundColor={'transparent'} color="#142A39" style={{marginTop: 40}} onPress={goToNotification}/>
+                        {/* View icon notification */}
+                        <View style={{flexDirection: 'row', marginTop: 40, backgroundColor: 'rgba(255, 255, 255, 0)',}}>
+                            <Entypo.Button name="notification" size={24} backgroundColor={'transparent'} color="#142A39" style={{backgroundColor: 'transparent'}} onPress={goToNotification}/>
+                        </View>
                     </View>
+                    {/* carosello */}
                     <View style={styles.center}>
-                        {/* carosello */}
                         <View style={{flex: 2,width: '100%', height: 218}}>
                             <SafeAreaView style={{ flex: 1, backgroundColor: "transparent" }}>
                                 <ScrollView
@@ -187,6 +190,8 @@ export default function Home () {
                             </SafeAreaView>
                         </View>
                     </View>
+
+                    {/* TabBar */}
                     <View style={styles.bottom}>
 
                         {/* View icon settings */}
