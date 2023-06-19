@@ -5,11 +5,9 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { BaseText } from '../components/Text';
 import { CallButton, SettingButton, QRButton } from "../components/Button";
 import { useNavigation } from '@react-navigation/native';
-import Prova from "./Prova";
 import Notification from "./Notification";
 
-
-export default function Home () {
+export default function Qrcode () {
 
     const navigation = useNavigation();
     const goToThirdPage = () => {
@@ -33,14 +31,14 @@ export default function Home () {
                         <Image source={require('../assets/logoSmall.png')} style={{width: 138, height: 24, marginTop: 50}}/>
                         <Entypo.Button name="notification" size={24} backgroundColor={'transparent'} color="#142A39" style={{marginTop: 40}} onPress={goToNotification}/>
                     </View>
+
+                    {/* View QR Code */}
                     <View style={styles.center}>
-                        {/* carosello */}
-                        <View style={{flex: 3, borderStyle: 'solid', borderWidth: 1, borderColor: 'yellow', width: 365, height: 218}}>
-                            <BaseText>Carosello persone</BaseText>
-                        </View>
-                        <View style={{flex: 3, borderStyle: 'solid', borderWidth: 1, borderColor: 'blue', width: 365, height: 218}}>
-                        <BaseText>Carosello luoghi</BaseText>
-                        </View>
+                        {/* QR COde */}
+                        <BaseText>QR Code</BaseText>
+                    </View>
+                    <View style={{flex: 1, width: 300, height: 100, marginTop: 20}}>
+                        <BaseText>Ciao, *nome*!</BaseText>
                     </View>
                     <View style={styles.bottom}>
 
@@ -98,15 +96,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: 0,
-        marginBottom: 150,
+        marginBottom: 10,
         borderStyle: 'solid',
         borderWidth: 1,
         borderColor: 'red',
-        marginLeft: 25,
-        width: 365,
-        height: 436,
+        width: 300,
+        height: 136,
     },
 });
-
-/* backgroundColor={'#30D158'} borderRadius={999} color="white" iconStyle={{paddingLeft: 2}}  */
-/* style={{ zIndex: 3, marginBottom: -98}} */
