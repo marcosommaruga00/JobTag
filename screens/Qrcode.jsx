@@ -13,6 +13,9 @@ export default function Qrcode () {
     const goToThirdPage = () => {
         navigation.navigate('Prova');
     };
+    const goToHome = () => {
+        navigation.navigate('Home');
+    };
     const goToNotification = () => {
         navigation.navigate('Notification');
     };
@@ -58,8 +61,8 @@ export default function Qrcode () {
 
                         {/* View icon call */}
                         <View style={{flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: 320, backgroundColor: 'rgba(255, 255, 255, 0)', zIndex: 2}}>
-                            <CallButton onPress={() => navigation.navigate("Prova")} >
-                                <Ionicons.Button name="call" size={42} backgroundColor={'#30D158'} borderRadius={99} color="white" iconStyle={{paddingLeft: 2}} onPress={goToThirdPage}/>
+                            <CallButton onPress={() => navigation.navigate("Home")} >
+                                <Ionicons.Button name="call" size={42} backgroundColor={'#30D158'} borderRadius={99} color="white" iconStyle={{paddingLeft: 2}} onPress={goToHome}/>
                             </CallButton>
                         </View>
                         {/* Imag menù */}
