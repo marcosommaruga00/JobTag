@@ -9,7 +9,7 @@ import { useNavigation } from '@react-navigation/native';
 
 const OFFSET = 40
 const ITEM_WIDTH = Dimensions.get("window").width - (OFFSET * 2)
-const ITEM_HEIGHT = 200
+const ITEM_HEIGHT = 190
 
 const cards = [
     { title: "Persona1", posterUrl: require("../assets/persone/persona1.jpg") },
@@ -29,7 +29,8 @@ const luoghi = [
 export default function Home () {
 
     const scrollX = React.useRef(new Animated.Value(0)).current
-
+    const scrollZ = React.useRef(new Animated.Value(0)).current
+    
     const navigation = useNavigation();
     const goToThirdPage = () => {
         navigation.navigate('Prova');
@@ -130,7 +131,7 @@ export default function Home () {
                                     bounces={false}
                                     disableIntervalMomentum
                                     onScroll={Animated.event(
-                                    [{ nativeEvent: { contentOffset: { x: scrollX } } }],
+                                    [{ nativeEvent: { contentOffset: { x: scrollZ } } }],
                                     { useNativeDriver: false }
                                     )}
                                     scrollEventThrottle={12}
@@ -142,12 +143,12 @@ export default function Home () {
                                         (idx + 1) * ITEM_WIDTH,
                                     ]
 
-                                    const translate = scrollX.interpolate({
+                                    const translate = scrollZ.interpolate({
                                         inputRange,
                                         outputRange: [0.85, 1, 0.85],
                                     })
 
-                                    const opacity = scrollX.interpolate({
+                                    const opacity = scrollZ.interpolate({
                                         inputRange,
                                         outputRange: [0.5, 1, 0.5],
                                     })
@@ -182,6 +183,9 @@ export default function Home () {
                             </SafeAreaView>
                         </View>
                     </View>
+
+                    {/* TabBar */}
+
                     <View style={styles.bottom}>
 
                         {/* View icon settings */}
@@ -245,6 +249,3 @@ const styles = StyleSheet.create({
         height: 436,
     },
 });
-
-/* backgroundColor={'#30D158'} borderRadius={999} color="white" iconStyle={{paddingLeft: 2}}  */
-/* style={{ zIndex: 3, marginBottom: -98}} */
