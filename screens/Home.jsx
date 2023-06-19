@@ -1,4 +1,5 @@
-import { ImageBackground, StyleSheet, View, Image } from "react-native";
+import { ImageBackground, StyleSheet, View, Image, SafeAreaView, ScrollView, Dimensions, Animated } from "react-native";
+import React, { Component } from "react"
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Entypo } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -8,8 +9,29 @@ import { useNavigation } from '@react-navigation/native';
 import Prova from "./Prova";
 import Notification from "./Notification";
 
+const OFFSET = 40
+const ITEM_WIDTH = Dimensions.get("window").width - (OFFSET * 2)
+const ITEM_HEIGHT = 190
+
+const cards = [
+    { title: "Persona 1", posterUrl: require("../assets/persone/persona1.jpg") },
+    { title: "Persona 2", posterUrl: require("../assets/persone/persona2.jpg") },
+    { title: "Persona 3", posterUrl: require("../assets/persone/persona3.jpg") },
+    { title: "Persona 4", posterUrl: require("../assets/persone/persona4.jpg") },
+    { title: "Persona 5", posterUrl: require("../assets/persone/persona5.jpg") },
+]
+const luoghi = [
+    { title: "Luogo 1", posterUrl: require("../assets/luoghi/luogo1.jpg") },
+    { title: "Luogo 2", posterUrl: require("../assets/luoghi/luogo2.jpg") },
+    { title: "Luogo 3", posterUrl: require("../assets/luoghi/luogo3.jpg") },
+    { title: "Luogo 4", posterUrl: require("../assets/luoghi/luogo4.jpg") },
+    { title: "Luogo 5", posterUrl: require("../assets/luoghi/luogo5.jpg") },
+]
 
 export default function Home () {
+
+    const scrollX = React.useRef(new Animated.Value(0)).current
+    const scrollZ = React.useRef(new Animated.Value(0)).current
 
     const navigation = useNavigation();
     const goToThirdPage = () => {
@@ -38,11 +60,131 @@ export default function Home () {
                     </View>
                     <View style={styles.center}>
                         {/* carosello */}
-                        <View style={{flex: 3, borderStyle: 'solid', borderWidth: 1, borderColor: 'yellow', width: 365, height: 218}}>
-                            <BaseText>Carosello persone</BaseText>
+                        <View style={{flex: 2,width: '100%', height: 218}}>
+                            <SafeAreaView style={{ flex: 1, backgroundColor: "transparent" }}>
+                                <ScrollView
+                                    horizontal={true}
+                                    decelerationRate={"normal"}
+                                    snapToInterval={ITEM_WIDTH}
+                                    style={{ paddingHorizontal: 0 }}
+                                    showsHorizontalScrollIndicator={false}
+                                    bounces={false}
+                                    disableIntervalMomentum
+                                    onScroll={Animated.event(
+                                    [{ nativeEvent: { contentOffset: { x: scrollX } } }],
+                                    { useNativeDriver: false }
+                                    )}
+                                    scrollEventThrottle={12}
+                                >
+                                    {cards.map((item, idx) => {
+                                    const inputRange = [
+                                        (idx - 1) * ITEM_WIDTH,
+                                        idx * ITEM_WIDTH,
+                                        (idx + 1) * ITEM_WIDTH,
+                                    ]
+
+                                    const translate = scrollX.interpolate({
+                                        inputRange,
+                                        outputRange: [0.85, 1, 0.85],
+                                    })
+
+                                    const opacity = scrollX.interpolate({
+                                        inputRange,
+                                        outputRange: [0.5, 1, 0.5],
+                                    })
+
+                                    return (
+                                        <Animated.View
+                                        style={{
+                                            width: ITEM_WIDTH,
+                                            height: ITEM_HEIGHT,
+                                            marginLeft: idx === 0 ? OFFSET : undefined,
+                                            marginRight: idx === cards.length - 1 ? OFFSET : undefined,
+                                            opacity: opacity,
+                                            transform: [{ scale: translate }],
+                                        }}
+                                        >
+                                        <ImageBackground
+                                            source={item.posterUrl}
+                                            style={{
+                                            flex: 1,
+                                            resizeMode: "cover",
+                                            justifyContent: "center",
+                                            borderColor: '#142A39',
+                                            borderWidth: 1,
+                                            borderRadius: 7,
+                                            }}
+                                            imageStyle={{ borderRadius: 6}}
+                                        />
+                                        <BaseText style={{fontSize: 16, fontWeight: 'bold', color: '#142A39', marginTop: 10, marginLeft: 10}}>{item.title}</BaseText>
+                                        </Animated.View>
+                                    )
+                                    })}
+                                </ScrollView>
+                            </SafeAreaView>
                         </View>
-                        <View style={{flex: 3, borderStyle: 'solid', borderWidth: 1, borderColor: 'blue', width: 365, height: 218}}>
-                        <BaseText>Carosello luoghi</BaseText>
+                        <View style={{flex: 2,width: '100%', height: 218}}>
+                            <SafeAreaView style={{ flex: 1, backgroundColor: "transparent" }}>
+                                <ScrollView
+                                    horizontal={true}
+                                    decelerationRate={"normal"}
+                                    snapToInterval={ITEM_WIDTH}
+                                    style={{ paddingHorizontal: 0 }}
+                                    showsHorizontalScrollIndicator={false}
+                                    bounces={false}
+                                    disableIntervalMomentum
+                                    onScroll={Animated.event(
+                                    [{ nativeEvent: { contentOffset: { x: scrollZ } } }],
+                                    { useNativeDriver: false }
+                                    )}
+                                    scrollEventThrottle={12}
+                                >
+                                    {luoghi.map((item, idx) => {
+                                    const inputRange = [
+                                        (idx - 1) * ITEM_WIDTH,
+                                        idx * ITEM_WIDTH,
+                                        (idx + 1) * ITEM_WIDTH,
+                                    ]
+
+                                    const translate = scrollZ.interpolate({
+                                        inputRange,
+                                        outputRange: [0.85, 1, 0.85],
+                                    })
+
+                                    const opacity = scrollZ.interpolate({
+                                        inputRange,
+                                        outputRange: [0.5, 1, 0.5],
+                                    })
+
+                                    return (
+                                        <Animated.View
+                                        style={{
+                                            width: ITEM_WIDTH,
+                                            height: ITEM_HEIGHT,
+                                            marginLeft: idx === 0 ? OFFSET : undefined,
+                                            marginRight: idx === luoghi.length - 1 ? OFFSET : undefined,
+                                            opacity: opacity,
+                                            transform: [{ scale: translate }],
+                                        }}
+                                        >
+                                        <ImageBackground
+                                            source={item.posterUrl}
+                                            style={{
+                                            flex: 1,
+                                            resizeMode: "cover",
+                                            justifyContent: "center",
+                                            borderColor: '#142A39',
+                                            borderWidth: 1,
+                                            borderRadius: 7,
+                                            }}
+                                            imageStyle={{ borderRadius: 6}}
+                                        />
+                                        <BaseText style={{fontSize: 16, fontWeight: 'bold', color: '#142A39', marginTop: 10, marginLeft: 10}}>{item.title}</BaseText>
+                                        </Animated.View>
+                                    )
+                                    })}
+                                </ScrollView>
+                            </SafeAreaView>
                         </View>
                     </View>
                     <View style={styles.bottom}>
@@ -64,7 +206,7 @@ export default function Home () {
                         {/* View icon call */}
                         <View style={{flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: 320, backgroundColor: 'rgba(255, 255, 255, 0)', zIndex: 2}}>
                             <CallButton onPress={() => navigation.navigate("Home")} >
-                                <Ionicons.Button name="call" size={42} backgroundColor={'#30D158'} borderRadius={99} color="white" iconStyle={{paddingLeft: 2}} onPress={goToThirdPage}/>
+                                <Ionicons.Button name="call" size={42} backgroundColor={'#30D158'} borderRadius={99} color="white" iconStyle={{paddingLeft: 2}} onPress={goToHome}/>
                             </CallButton>
                         </View>
                         {/* Imag menù */}
@@ -102,13 +244,9 @@ const styles = StyleSheet.create({
         flex: 2,
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: 0,
-        marginBottom: 150,
-        borderStyle: 'solid',
-        borderWidth: 1,
-        borderColor: 'red',
-        marginLeft: 25,
-        width: 365,
+        marginTop: -100,
+        marginBottom: 0,
+        width: '100%',
         height: 436,
     },
 });
