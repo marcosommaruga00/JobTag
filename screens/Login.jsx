@@ -29,7 +29,7 @@ export default function Login ({ navigation }) {
                         </StandardButton>
                     </View>
                     <View style={styles.bottom}>
-                        <Image source={require('../assets/menu.png')} style={{width: 390, height: 247}}/>
+                        <Image source={require('../assets/menu.png')} style={{width: '100%', height: 247}}/>
                     </View>
                 </View>
             </ImageBackground>
@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
     container: {
     flex: 1,
     alignItems: 'center',
+    width: '100%',
 
     },
     center:{
@@ -55,6 +56,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'flex-end',
         marginBottom: 0,
+        width: '100%',
     },
     logo: {
         flex: 1,

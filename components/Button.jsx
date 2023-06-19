@@ -44,7 +44,7 @@ const SettingButton = styled.Pressable`
     padding-left: 1px;
     border-radius: 99px;
     z-index: 999;
-    margin-bottom: -355px;
+    margin-bottom: -113%;
     margin-left: 290px;
     justify-content: center;
     `;
@@ -57,7 +57,7 @@ const QRButton = styled.Pressable`
     padding-left: 0px;
     border-radius: 99px;
     z-index: 999;
-    margin-bottom: -355px;
+    margin-bottom: -110%;
     margin-left: -20px;
     justify-content: center;
     `;

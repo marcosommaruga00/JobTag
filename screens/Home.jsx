@@ -68,7 +68,7 @@ export default function Home () {
                             </CallButton>
                         </View>
                         {/* Imag menù */}
-                        <Image source={require('../assets/menu.png')} style={{width: 390, height: 247}}/>
+                        <Image source={require('../assets/menu.png')} style={{width: '100%', height: 247}}/>
                     </View>
                 </View>
             </ImageBackground>
@@ -81,6 +81,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    width: '100%',
     },
     logo: {
         flex: 1,
@@ -95,6 +96,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'flex-end',
         marginBottom: 0,
+        width: '100%',
     },
     center:{
         flex: 2,
