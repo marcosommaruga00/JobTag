@@ -107,6 +107,9 @@ export default function Home () {
                                             flex: 1,
                                             resizeMode: "cover",
                                             justifyContent: "center",
+                                            borderColor: '#142A39',
+                                            borderWidth: 1,
+                                            borderRadius: 7,
                                             }}
                                             imageStyle={{ borderRadius: 6}}
                                         />
@@ -166,6 +169,9 @@ export default function Home () {
                                             flex: 1,
                                             resizeMode: "cover",
                                             justifyContent: "center",
+                                            borderColor: '#142A39',
+                                            borderWidth: 1,
+                                            borderRadius: 7,
                                             }}
                                             imageStyle={{ borderRadius: 6}}
                                         />
