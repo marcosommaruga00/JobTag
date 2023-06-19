@@ -37,10 +37,9 @@ export default function Qrcode () {
 
                     {/* View QR Code */}
                     <View style={styles.center}>
-                        {/* QR COde */}
-                        <BaseText>QR Code</BaseText>
+                        <Image source={require('../assets/ScanToClockIn.png')} style={{width: 300, height: 300}}/>
                     </View>
-                    <View style={{flex: 1, width: 300, height: 100, marginTop: 20}}>
+                    <View style={{flex: 1, width: 300, height: 100, marginTop: 10}}>
                         <BaseText>Ciao, *nome*!</BaseText>
                     </View>
                     <View style={styles.bottom}>
@@ -100,9 +99,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         marginTop: 0,
         marginBottom: 10,
-        borderStyle: 'solid',
-        borderWidth: 1,
-        borderColor: 'red',
         width: 300,
         height: 136,
     },
