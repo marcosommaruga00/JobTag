@@ -2,7 +2,7 @@ import { ImageBackground, StyleSheet, View, Image } from "react-native";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Entypo } from '@expo/vector-icons';
 import { BaseText } from '../components/Text';
-import { CallButton } from "../components/Button";
+import { CallButton, SettingButton, QRButton } from "../components/Button";
 import { useNavigation } from '@react-navigation/native';
 import Prova from "./Prova";
 import Notification from "./Notification";
@@ -35,6 +35,16 @@ export default function Home () {
                         </View>
                     </View>
                     <View style={styles.bottom}>
+                        <View style={{flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: 320, backgroundColor: 'rgba(255, 255, 255, 0)', zIndex: 2}}>
+                            <SettingButton onPress={() => navigation.navigate("Prova")}>
+                                <Ionicons.Button name="settings" size={42} backgroundColor={'rgba(255, 255, 255, 0)'} borderRadius={99} color="white" iconStyle={{paddingLeft: 2}} onPress={goToThirdPage}/>
+                            </SettingButton>
+                        </View>
+                        <View style={{flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: 320, backgroundColor: 'rgba(255, 255, 255, 0)', zIndex: 2}}>
+                            <QRButton onPress={() => navigation.navigate("Prova")}>
+                                <Ionicons.Button name="qr-code" size={42} backgroundColor={'rgba(255, 255, 255, 0)'} borderRadius={99} color="white" iconStyle={{paddingLeft: 2}} onPress={goToThirdPage}/>
+                            </QRButton>
+                        </View>
                         <CallButton onPress={() => navigation.navigate("Prova")} >
                             <Ionicons.Button name="call" size={42} backgroundColor={'#30D158'} borderRadius={99} color="white" iconStyle={{paddingLeft: 2}} onPress={goToThirdPage}/>
                         </CallButton>

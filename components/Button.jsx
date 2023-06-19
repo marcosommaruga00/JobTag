@@ -28,7 +28,7 @@ const NotificationButton = styled.Pressable`
     background-color: #30D158;
     width: 79px;
     height: 75px;
-    padding-left: 7px;
+    padding-left: 0px;
     border-radius: 99px;
     z-index: 1;
     margin-bottom: -98px;
@@ -36,3 +36,29 @@ const NotificationButton = styled.Pressable`
     justify-content: center;
     `;
 export { NotificationButton };
+
+const SettingButton = styled.Pressable`
+    background-color: rgba(255, 255, 255, 0);
+    width: 79px;
+    height: 75px;
+    padding-left: 1px;
+    border-radius: 99px;
+    z-index: 999;
+    margin-bottom: -310px;
+    margin-left: 290px;
+    justify-content: center;
+    `;
+export { SettingButton };
+
+const QRButton = styled.Pressable`
+    background-color: rgba(255, 255, 255, 0);
+    width: 79px;
+    height: 75px;
+    padding-left: 0px;
+    border-radius: 99px;
+    z-index: 999;
+    margin-bottom: -310px;
+    margin-left: -30px;
+    justify-content: center;
+    `;
+export { QRButton };
