@@ -51,7 +51,7 @@ export default function Qrcode () {
 
                         {/* View icon QRCode */}
                         <View style={{flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: 320, backgroundColor: 'rgba(255, 255, 255, 0)', zIndex: 2}}>
-                            <QRButton onPress={() => navigation.navigate("Prova")}>
+                            <QRButton onPress={() => navigation.navigate("Qrcode")}>
                                 <MaterialIcons name="qr-code-scanner" size={42} backgroundColor={'rgba(255, 255, 255, 0)'} borderRadius={99} color="white" iconStyle={{paddingLeft: 2}} onPress={goToQrcode}/>
                             </QRButton>
                         </View>
