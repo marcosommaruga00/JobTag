@@ -51,11 +51,12 @@ export default function Home () {
                             </QRButton>
                         </View>
 
-                        {/* Icon call */}
-                        <CallButton onPress={() => navigation.navigate("Prova")} >
-                            <Ionicons.Button name="call" size={42} backgroundColor={'#30D158'} borderRadius={99} color="white" iconStyle={{paddingLeft: 2}} onPress={goToThirdPage}/>
-                        </CallButton>
-
+                        {/* View icon call */}
+                        <View style={{flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: 320, backgroundColor: 'rgba(255, 255, 255, 0)', zIndex: 2}}>
+                            <CallButton onPress={() => navigation.navigate("Prova")} >
+                                <Ionicons.Button name="call" size={42} backgroundColor={'#30D158'} borderRadius={99} color="white" iconStyle={{paddingLeft: 2}} onPress={goToThirdPage}/>
+                            </CallButton>
+                        </View>
                         {/* Imag menù */}
                         <Image source={require('../assets/menu.png')} style={{width: 390, height: 247}}/>
                     </View>
