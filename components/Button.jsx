@@ -25,7 +25,7 @@ const CallButton = styled.Pressable`
 export { CallButton };
 
 const NotificationButton = styled.Pressable`
-    background-color: #30D158;
+    background-color: rgba(255, 255, 255, 0);
     width: 79px;
     height: 75px;
     padding-left: 0px;
