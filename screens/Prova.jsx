@@ -12,18 +12,18 @@ const ITEM_WIDTH = Dimensions.get("window").width - (OFFSET * 2)
 const ITEM_HEIGHT = 190
 
 const cards = [
-    { title: "Persona1", posterUrl: require("../assets/persone/persona1.jpg") },
-    { title: "Persona2", posterUrl: require("../assets/persone/persona2.jpg") },
-    { title: "Persona3", posterUrl: require("../assets/persone/persona3.jpg") },
-    { title: "Persona4", posterUrl: require("../assets/persone/persona4.jpg") },
-    { title: "Persona5", posterUrl: require("../assets/persone/persona5.jpg") },
+    { title: "Persona 1", posterUrl: require("../assets/persone/persona1.jpg") },
+    { title: "Persona 2", posterUrl: require("../assets/persone/persona2.jpg") },
+    { title: "Persona 3", posterUrl: require("../assets/persone/persona3.jpg") },
+    { title: "Persona 4", posterUrl: require("../assets/persone/persona4.jpg") },
+    { title: "Persona 5", posterUrl: require("../assets/persone/persona5.jpg") },
 ]
 const luoghi = [
-    { title: "Luogo1", posterUrl: require("../assets/luoghi/luogo1.jpg") },
-    { title: "Luogo2", posterUrl: require("../assets/luoghi/luogo2.jpg") },
-    { title: "Luogo3", posterUrl: require("../assets/luoghi/luogo3.jpg") },
-    { title: "Luogo4", posterUrl: require("../assets/luoghi/luogo4.jpg") },
-    { title: "Luogo5", posterUrl: require("../assets/luoghi/luogo5.jpg") },
+    { title: "Luogo 1", posterUrl: require("../assets/luoghi/luogo1.jpg") },
+    { title: "Luogo 2", posterUrl: require("../assets/luoghi/luogo2.jpg") },
+    { title: "Luogo 3", posterUrl: require("../assets/luoghi/luogo3.jpg") },
+    { title: "Luogo 4", posterUrl: require("../assets/luoghi/luogo4.jpg") },
+    { title: "Luogo 5", posterUrl: require("../assets/luoghi/luogo5.jpg") },
 ]
 
 export default function Home () {
@@ -114,6 +114,7 @@ export default function Home () {
                                             }}
                                             imageStyle={{ borderRadius: 6}}
                                         />
+                                        <BaseText style={{fontSize: 16, fontWeight: 'bold', color: '#142A39', marginTop: 10, marginLeft: 10}}>{item.title}</BaseText>
                                         </Animated.View>
                                     )
                                     })}
@@ -176,6 +177,7 @@ export default function Home () {
                                             }}
                                             imageStyle={{ borderRadius: 6}}
                                         />
+                                        <BaseText style={{fontSize: 16, fontWeight: 'bold', color: '#142A39', marginTop: 10, marginLeft: 10}}>{item.title}</BaseText>
                                         </Animated.View>
                                     )
                                     })}
