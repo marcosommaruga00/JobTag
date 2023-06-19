@@ -24,7 +24,7 @@ export default function Home () {
                 <View style={styles.container}>
                     <View style={styles.logo} >
                         <Image source={require('../assets/logoSmall.png')} style={{width: 138, height: 24, marginTop: 50}}/>
-                        <Entypo.Button name="notification" size={24} backgroundColor={'transparent'} color="#142A39" style={{marginTop: 38}} onPress={goToNotification}/>
+                        <Entypo.Button name="notification" size={24} backgroundColor={'transparent'} color="#142A39" style={{marginTop: 40}} onPress={goToNotification}/>
                     </View>
                     <View style={styles.center}>
                         {/* carosello */}
