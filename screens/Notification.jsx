@@ -36,11 +36,13 @@ export default function Qrcode () {
                         <Image source={require('../assets/logoSmall.png')} style={{width: 138, height: 24, marginTop: 50}}/>
                     </View>
 
+                    <View style={styles.back}>
+                        <Ionicons.Button name="chevron-back" size={42} backgroundColor={'rgba(255, 255, 255, 0)'} borderRadius={99} color="#142A39" iconStyle={{paddingLeft: 2}} onPress={goToBack}/>
+                        <BaseText style={{fontSize: 25, color: '#142A39', marginTop: 15, fontWeight: 'bold'}}>Notifiche</BaseText>
+                    </View>
+
                     {/* View Notification */}
                     <View style={styles.center}>
-                        <View style={{flex: 1, flexDirection: 'row', alignItems: 'start', justifyContent: 'start', width: 'auto', backgroundColor: 'rgba(255, 255, 255, 0)', zIndex: 2}}>
-                            <Ionicons.Button name="chevron-back" size={42} backgroundColor={'rgba(255, 255, 255, 0)'} borderRadius={99} color="#142A39" iconStyle={{paddingLeft: 2}} onPress={goToBack}/>
-                        </View>
                         <BaseText>Notification</BaseText>
                     </View>
                 </View>
@@ -54,6 +56,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    width: '100%',
     },
     logo: {
         flex: 1,
@@ -62,6 +65,15 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         width: 320,
         height: 100,
+        marginBottom: -270,
+        backgroundColor: 'rgba(255, 255, 255, 0)',
+    },
+    back: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'left',
+        width: 370,
+        height: 10,
         marginBottom: -270,
         backgroundColor: 'rgba(255, 255, 255, 0)',
     },
