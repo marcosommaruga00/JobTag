@@ -38,7 +38,7 @@ export default function Login ({ navigation }) {
                 
                 <View style={styles.container}>
                     <View style={styles.logo} >
-                        <Image source={require('../assets/logoSmall.png')} style={{width: 138, height: 24, marginTop: 50}}/>
+                        <Image source={require('../assets/logoSmall2.jpg')} style={{width: 138, height: 24, marginTop: 50}}/>
                     </View>
                     <View style={styles.center}>
                         <Title2>Accedi</Title2>
