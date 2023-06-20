@@ -35,6 +35,15 @@ export default function Home () {
     const scrollX = useRef(new Animated.Value(0)).current
     const scrollZ = useRef(new Animated.Value(0)).current
 
+    const call = () => {
+        if(peopleSelected != null && luoghiSelected != null){
+            return alert(`Chiamata inviata!\n ${peopleSelected.title} è stato avvisato.`)
+        } else if (peopleSelected == null && luoghiSelected != null || peopleSelected != null && luoghiSelected == null || peopleSelected == null && luoghiSelected == null){ 
+            return alert('Seleziona una persona e un luogo per effettuare la chiamata!') 
+        }
+    return
+    }
+
     const navigation = useNavigation();
     const goToThirdPage = () => {
         navigation.navigate('Prova');
@@ -219,7 +228,7 @@ export default function Home () {
                         {/* View icon call */}
                         <View style={{flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: 320, backgroundColor: 'rgba(255, 255, 255, 0)', zIndex: 2}}>
                             <CallButton onPress={() => navigation.navigate("Home")} >
-                                <Ionicons.Button name="call" size={42} backgroundColor={'#30D158'} borderRadius={99} color="white" iconStyle={{paddingLeft: 2}} onPress={() => alert(`Chiamata inviata!\n ${peopleSelected.title} arriverà il prima possibile! `) }/>
+                                <Ionicons.Button name="call" size={42} backgroundColor={'#30D158'} borderRadius={99} color="white" iconStyle={{paddingLeft: 2}} onPress={() => call()}/>
                             </CallButton>
                         </View>
                         {/* Imag menù */}
