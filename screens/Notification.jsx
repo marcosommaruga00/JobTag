@@ -1,4 +1,4 @@
-import { ImageBackground, StyleSheet, View, Image } from "react-native";
+import { ImageBackground, StyleSheet, View, Image, Pressable } from "react-native";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Entypo } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -33,7 +33,9 @@ export default function Qrcode () {
             <ImageBackground source={require('../assets/bg.png')} style={{width: '100%', height: '100%'}}>
                 <View style={styles.container}>
                     <View style={styles.logo} >
-                        <Image source={require('../assets/logoSmall.png')} style={{width: 138, height: 24, marginTop: 50}}/>
+                        <Pressable onPress={goToHome}>
+                            <Image source={require('../assets/logoSmall.png')} style={{width: 138, height: 24, marginTop: 50}}/>
+                        </Pressable>
                     </View>
 
                     <View style={styles.back}>

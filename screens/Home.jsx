@@ -1,5 +1,5 @@
-import { ImageBackground, StyleSheet, View, Image, SafeAreaView, ScrollView, Dimensions, Animated } from "react-native";
-import React, { Component } from "react"
+import { ImageBackground, StyleSheet, View, Image, SafeAreaView, ScrollView, Dimensions, Animated, Pressable } from "react-native";
+import { useRef, useState } from "react"
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Entypo } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -29,9 +29,10 @@ const luoghi = [
 ]
 
 export default function Home () {
-
-    const scrollX = React.useRef(new Animated.Value(0)).current
-    const scrollZ = React.useRef(new Animated.Value(0)).current
+    const [peopleSelected, setPeopleSelected] = useState(null)
+    const [luoghiSelected, setLuoghiSelected] = useState(null)
+    const scrollX = useRef(new Animated.Value(0)).current
+    const scrollZ = useRef(new Animated.Value(0)).current
 
     const navigation = useNavigation();
     const goToThirdPage = () => {
@@ -80,48 +81,51 @@ export default function Home () {
                                     scrollEventThrottle={12}
                                 >
                                     {cards.map((item, idx) => {
-                                    const inputRange = [
-                                        (idx - 1) * ITEM_WIDTH,
-                                        idx * ITEM_WIDTH,
-                                        (idx + 1) * ITEM_WIDTH,
-                                    ]
+                                        const inputRange = [
+                                            (idx - 1) * ITEM_WIDTH,
+                                            idx * ITEM_WIDTH,
+                                            (idx + 1) * ITEM_WIDTH,
+                                        ]
 
-                                    const translate = scrollX.interpolate({
-                                        inputRange,
-                                        outputRange: [0.85, 1, 0.85],
-                                    })
+                                        const translate = scrollX.interpolate({
+                                            inputRange,
+                                            outputRange: [0.85, 1, 0.85],
+                                        })
 
-                                    const opacity = scrollX.interpolate({
-                                        inputRange,
-                                        outputRange: [0.5, 1, 0.5],
-                                    })
+                                        const opacity = scrollX.interpolate({
+                                            inputRange,
+                                            outputRange: [0.5, 1, 0.5],
+                                        })
 
-                                    return (
-                                        <Animated.View
-                                        style={{
-                                            width: ITEM_WIDTH,
-                                            height: ITEM_HEIGHT,
-                                            marginLeft: idx === 0 ? OFFSET : undefined,
-                                            marginRight: idx === cards.length - 1 ? OFFSET : undefined,
-                                            opacity: opacity,
-                                            transform: [{ scale: translate }],
-                                        }}
-                                        >
-                                        <ImageBackground
-                                            source={item.posterUrl}
-                                            style={{
-                                            flex: 1,
-                                            resizeMode: "cover",
-                                            justifyContent: "center",
-                                            borderColor: '#142A39',
-                                            borderWidth: 1,
-                                            borderRadius: 7,
-                                            }}
-                                            imageStyle={{ borderRadius: 6}}
-                                        />
-                                        <BaseText style={{fontSize: 16, fontWeight: 'bold', color: '#142A39', marginTop: 10, marginLeft: 10}}>{item.title}</BaseText>
-                                        </Animated.View>
-                                    )
+                                        return (
+                                            <Pressable onPress={() => {setPeopleSelected(idx)}}>
+                                                <Animated.View
+                                                style={{
+                                                    width: ITEM_WIDTH,
+                                                    height: ITEM_HEIGHT,
+                                                    marginLeft: idx === 0 ? OFFSET : undefined,
+                                                    marginRight: idx === cards.length - 1 ? OFFSET : undefined,
+                                                    opacity: opacity,
+                                                    transform: [{ scale: translate }],
+                                                }}
+                                                >
+                                                    <ImageBackground
+                                                        source={item.posterUrl}
+                                                        style={{
+                                                        flex: 1,
+                                                        resizeMode: "cover",
+                                                        justifyContent: "center",
+                                                        borderColor: '#142A39',
+                                                        borderWidth: 1,
+                                                        borderRadius: 7,
+                                                        }}
+                                                        opacity={peopleSelected === idx ? 0.5 : 1}
+                                                        imageStyle={{ borderRadius: 6}}
+                                                    />
+                                                    <BaseText style={{fontSize: 16, fontWeight: 'bold', color: '#142A39', marginTop: 10, marginLeft: 10}}>{item.title} </BaseText>
+                                                </Animated.View>
+                                            </Pressable>
+                                        )
                                     })}
                                 </ScrollView>
                             </SafeAreaView>
@@ -160,30 +164,33 @@ export default function Home () {
                                     })
 
                                     return (
-                                        <Animated.View
-                                        style={{
-                                            width: ITEM_WIDTH,
-                                            height: ITEM_HEIGHT,
-                                            marginLeft: idx === 0 ? OFFSET : undefined,
-                                            marginRight: idx === luoghi.length - 1 ? OFFSET : undefined,
-                                            opacity: opacity,
-                                            transform: [{ scale: translate }],
-                                        }}
-                                        >
-                                        <ImageBackground
-                                            source={item.posterUrl}
+                                        <Pressable onPress={() => {setLuoghiSelected(idx)}}>
+                                            <Animated.View
                                             style={{
-                                            flex: 1,
-                                            resizeMode: "cover",
-                                            justifyContent: "center",
-                                            borderColor: '#142A39',
-                                            borderWidth: 1,
-                                            borderRadius: 7,
+                                                width: ITEM_WIDTH,
+                                                height: ITEM_HEIGHT,
+                                                marginLeft: idx === 0 ? OFFSET : undefined,
+                                                marginRight: idx === luoghi.length - 1 ? OFFSET : undefined,
+                                                opacity: opacity,
+                                                transform: [{ scale: translate }],
                                             }}
-                                            imageStyle={{ borderRadius: 6}}
-                                        />
-                                        <BaseText style={{fontSize: 16, fontWeight: 'bold', color: '#142A39', marginTop: 10, marginLeft: 10}}>{item.title}</BaseText>
-                                        </Animated.View>
+                                            >
+                                                <ImageBackground
+                                                    source={item.posterUrl}
+                                                    style={{
+                                                    flex: 1,
+                                                    resizeMode: "cover",
+                                                    justifyContent: "center",
+                                                    borderColor: '#142A39',
+                                                    borderWidth: 1,
+                                                    borderRadius: 7,
+                                                    }}
+                                                    opacity={luoghiSelected === idx ? 0.5 : 1}
+                                                    imageStyle={{ borderRadius: 6}}
+                                                />
+                                                <BaseText style={{fontSize: 16, fontWeight: 'bold', color: '#142A39', marginTop: 10, marginLeft: 10}}>{item.title} </BaseText>
+                                            </Animated.View>
+                                        </Pressable>
                                     )
                                     })}
                                 </ScrollView>
