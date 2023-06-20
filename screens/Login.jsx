@@ -41,7 +41,7 @@ export default function Login ({ navigation }) {
                         <Image source={require('../assets/logoSmall5.png')} style={{width: 138, height: 24, marginTop: 50}}/>
                     </View>
                     <View style={styles.center}>
-                        <Title2>Accedi</Title2>
+                        <Title2>Benvenuto!</Title2>
                         <SafeAreaView>
                             <Input placeholder="Inserisci l'email" onChangeText={setEmail} />
                             <Input placeholder="Inserisci la password" onChangeText={setPassword} secureTextEntry={true}/>

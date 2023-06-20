@@ -13,7 +13,7 @@ const Title2 = styled.Text`
     font-size: 40px;
     color: #000;
     text-align: center;
-    margin-top: 60px;
+    margin-top: 30px;
     margin-bottom: 30px;
 `;
 
