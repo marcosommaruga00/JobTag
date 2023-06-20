@@ -14,12 +14,13 @@ const ITEM_WIDTH = Dimensions.get("window").width - (OFFSET * 2)
 const ITEM_HEIGHT = 190
 
 const cards = [
-    { title: "Persona 1", posterUrl: require("../assets/persone/persona1.jpg") },
-    { title: "Persona 2", posterUrl: require("../assets/persone/persona2.jpg") },
-    { title: "Persona 3", posterUrl: require("../assets/persone/persona3.jpg") },
-    { title: "Persona 4", posterUrl: require("../assets/persone/persona4.jpg") },
-    { title: "Persona 5", posterUrl: require("../assets/persone/persona5.jpg") },
+    { id: 0, title: "Persona 1", posterUrl: require("../assets/persone/persona1.jpg") },
+    { id: 1, title: "Persona 2", posterUrl: require("../assets/persone/persona2.jpg") },
+    { id: 2, title: "Persona 3", posterUrl: require("../assets/persone/persona3.jpg") },
+    { id: 3, title: "Persona 4", posterUrl: require("../assets/persone/persona4.jpg") },
+    { id: 4, title: "Persona 5", posterUrl: require("../assets/persone/persona5.jpg") },
 ]
+
 const luoghi = [
     { title: "Luogo 1", posterUrl: require("../assets/luoghi/luogo1.jpg") },
     { title: "Luogo 2", posterUrl: require("../assets/luoghi/luogo2.jpg") },
@@ -98,7 +99,7 @@ export default function Home () {
                                         })
 
                                         return (
-                                            <Pressable onPress={() => {setPeopleSelected(idx)}}>
+                                            <Pressable onPress={() => {setPeopleSelected(item)}}>
                                                 <Animated.View
                                                 style={{
                                                     width: ITEM_WIDTH,
@@ -119,10 +120,10 @@ export default function Home () {
                                                         borderWidth: 1,
                                                         borderRadius: 7,
                                                         }}
-                                                        opacity={peopleSelected === idx ? 0.5 : 1}
+                                                        opacity={cards.indexOf(peopleSelected) === idx ? 0.5 : 1}
                                                         imageStyle={{ borderRadius: 6}}
                                                     />
-                                                    <BaseText style={{fontSize: 16, fontWeight: 'bold', color: '#142A39', marginTop: 10, marginLeft: 10}}>{item.title} </BaseText>
+                                                    <BaseText style={{fontSize: 16, fontWeight: 'bold', color: '#142A39', marginTop: 10, marginLeft: 10}}>{item.title}</BaseText>
                                                 </Animated.View>
                                             </Pressable>
                                         )
@@ -218,7 +219,7 @@ export default function Home () {
                         {/* View icon call */}
                         <View style={{flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: 320, backgroundColor: 'rgba(255, 255, 255, 0)', zIndex: 2}}>
                             <CallButton onPress={() => navigation.navigate("Home")} >
-                                <Ionicons.Button name="call" size={42} backgroundColor={'#30D158'} borderRadius={99} color="white" iconStyle={{paddingLeft: 2}} onPress={goToHome}/>
+                                <Ionicons.Button name="call" size={42} backgroundColor={'#30D158'} borderRadius={99} color="white" iconStyle={{paddingLeft: 2}} onPress={() => alert(`Chiamata inviata! ${peopleSelected.title} arriverà il prima possibile! `) }/>
                             </CallButton>
                         </View>
                         {/* Imag menù */}
