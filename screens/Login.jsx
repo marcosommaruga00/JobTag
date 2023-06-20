@@ -1,4 +1,5 @@
-import { StyleSheet, View, ImageBackground, Image, SafeAreaView} from "react-native";
+import { StyleSheet, View, ImageBackground, Image, SafeAreaView, TextInput} from "react-native";
+import {useState} from "react"
 import { Label, Title, Input, Title2, BaseText2 } from '../components/Text';
 import { StandardButton, IconButton } from "../components/Button";
 import { useFonts } from 'expo-font';
@@ -6,6 +7,8 @@ import { useFonts } from 'expo-font';
 const image = {uri: "../assets/bg.png"};
 
 export default function Login ({ navigation }) {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
     let [fontsLoaded] = useFonts({
         'Montserrat-Regular': require('../assets/fonts/Montserrat-Regular.ttf'),
@@ -20,6 +23,14 @@ export default function Login ({ navigation }) {
         'Poppins-Black': require('../assets/fonts/Poppins-Black.ttf'),
     });
 
+    const accedi = () => {
+        if (email != "prova@prova.it" && password != "prova" || email == "" && password == "" || email == "prova@prova.it" && password != "prova" || email != "prova@prova.it" && password == "prova") {
+            alert("Email e password errati");
+        } else {
+            navigation.navigate("Home");
+        }
+    }
+
     return (
         fontsLoaded && fontsLoaded2 &&
         <View>
@@ -32,13 +43,13 @@ export default function Login ({ navigation }) {
                     <View style={styles.center}>
                         <Title2>Accedi</Title2>
                         <SafeAreaView>
-                            <Input placeholder="Inserisci l'email"/>
-                            <Input placeholder="Inserisci la password" secureTextEntry={true}/>
+                            <Input placeholder="Inserisci l'email" onChangeText={setEmail} />
+                            <Input placeholder="Inserisci la password" onChangeText={setPassword} secureTextEntry={true}/>
                         </SafeAreaView>
                         <BaseText2>
                             Password dimenticata?
                         </BaseText2>
-                        <StandardButton onPress={() => navigation.navigate("Home")}>
+                        <StandardButton onPress={accedi}>
                             <Label>Accedi</Label>
                         </StandardButton>
                     </View>
