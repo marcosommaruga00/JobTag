@@ -16,6 +16,12 @@ export default function Login ({ navigation }) {
         'Montserrat-Medium': require('../assets/fonts/Montserrat-Medium.ttf'),
     });
 
+    let [fontsLoaded2] = useFonts({
+        'Poppins-Regular': require('../assets/fonts/Poppins-Regular.ttf'),
+        'Poppins-Medium': require('../assets/fonts/Poppins-Medium.ttf'),
+        'Poppins-Black': require('../assets/fonts/Poppins-Black.ttf'),
+    });
+
     return (
         <View>
             <ImageBackground source={require('../assets/bgHome.png')} style={{width: '100%', height: '100%'}}>

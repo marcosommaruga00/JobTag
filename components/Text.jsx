@@ -25,6 +25,7 @@ const BaseText = styled.Text`
 `;
 
 const BaseText2 = styled.Text`
+    font-family: 'Poppins-Regular';
     font-size: 10px;
     color: #000;
     text-align: ${(props) => props.align || "center"};
@@ -34,12 +35,14 @@ const BaseText2 = styled.Text`
 `;
 
 const Label = styled.Text `
+    font-family: 'Poppins-Black';
     color: #fff;
     text-transform: uppercase;
     text-align: center;
     `;
 
 const Input = styled.TextInput `
+    font-family: 'Poppins-Regular';
     background-color: #fff;
     width: 320px;
     height: 40px;
