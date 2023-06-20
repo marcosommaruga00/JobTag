@@ -19,7 +19,7 @@ const CallButton = styled.Pressable`
     border-radius: 99px;
     z-index: 1;
     margin-bottom: -122px;
-    margin-left: 122px;
+    margin-left: 121px;
     justify-content: center;
     `;
 export { CallButton };
