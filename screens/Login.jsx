@@ -1,12 +1,21 @@
 import { StyleSheet, View, ImageBackground, Image, SafeAreaView} from "react-native";
 import { Label, Title, Input, Title2, BaseText2 } from '../components/Text';
 import { StandardButton, IconButton } from "../components/Button";
+import { useFonts } from 'expo-font';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import Prova from "./Prova";
 
 const image = {uri: "../assets/bg.png"};
 
 export default function Login ({ navigation }) {
+
+    let [fontsLoaded] = useFonts({
+        'Montserrat-Regular': require('../assets/fonts/Montserrat-Regular.ttf'),
+        'Montserrat-Bold': require('../assets/fonts/Montserrat-Bold.ttf'),
+        'Montserrat-SemiBold': require('../assets/fonts/Montserrat-SemiBold.ttf'),
+        'Montserrat-Medium': require('../assets/fonts/Montserrat-Medium.ttf'),
+    });
+
     return (
         <View>
             <ImageBackground source={require('../assets/bgHome.png')} style={{width: '100%', height: '100%'}}>

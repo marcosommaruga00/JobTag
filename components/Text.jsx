@@ -9,6 +9,7 @@ const Title = styled.Text`
 `;
 
 const Title2 = styled.Text`
+    font-family: 'Montserrat-Bold';
     font-size: 40px;
     color: #000;
     text-align: center;
