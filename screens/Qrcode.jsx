@@ -47,7 +47,7 @@ export default function Qrcode () {
                             Scannerizza il
                         </BaseText>
                         <BaseText style={styles.bold}>QR Code</BaseText>
-                        <BaseText style={{textTransform: 'default'}}>per timbrare</BaseText>
+                        <BaseText style={{textTransform: 'lowercase'}}>per timbrare</BaseText>
                     </View>
                     <View style={styles.bottom}>
 
