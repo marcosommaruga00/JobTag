@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "todolist",
-    "slug": "todolist",
+    "name": "jobtag",
+    "slug": "jobtag",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/Appicon.png",
