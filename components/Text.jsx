@@ -52,4 +52,13 @@ const Input = styled.TextInput `
     justify-content: center;
     `;
 
-export { Label, Title, Input, BaseText, BaseText2, Title2 }
+const ComingSoon = styled.Text `
+    font-family: 'Montserrat-Bold';
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 60px;
+    `;
+
+export { Label, Title, Input, BaseText, BaseText2, Title2, ComingSoon }
