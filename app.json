@@ -2,13 +2,13 @@
   "expo": {
     "name": "jobtag",
     "slug": "jobtag",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/Appicon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/Loading1.jpg",
-      "resizeMode": "fit"
+      "resizeMode": "cover"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -18,7 +18,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/adaptive-Appicon.png",
         "backgroundColor": "#ffffff"
       }
     },
