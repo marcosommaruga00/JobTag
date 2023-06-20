@@ -34,7 +34,7 @@ export default function Qrcode () {
                 <View style={styles.container}>
                     <View style={styles.logo} >
                         <Pressable onPress={goToHome}>
-                            <Image source={require('../assets/logoSmall.png')} style={{width: 138, height: 24, marginTop: 50}}/>
+                            <Image source={require('../assets/logoSmall5.png')} style={{width: 138, height: 24, marginTop: 50}}/>
                         </Pressable>
                     </View>
 

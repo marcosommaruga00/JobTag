@@ -32,7 +32,7 @@ export default function Qrcode () {
                 <View style={styles.container}>
                     <View style={styles.logo} >
                         <Pressable onPress={goToHome}>
-                            <Image source={require('../assets/logoSmall.png')} onPress={goToHome} style={{width: 138, height: 24, marginTop: 50}}/>
+                            <Image source={require('../assets/logoSmall5.png')} onPress={goToHome} style={{width: 138, height: 24, marginTop: 50}}/>
                         </Pressable>
                         <Entypo.Button name="notification" size={24} backgroundColor={'transparent'} color="#142A39" style={{marginTop: 40}} onPress={goToNotification}/>
                     </View>
