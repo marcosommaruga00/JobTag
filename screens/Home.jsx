@@ -232,7 +232,7 @@ export default function Home () {
                             </CallButton>
                         </View>
                         {/* Imag menù */}
-                        <Image source={require('../assets/menu.png')} style={{width: '100%', height: 247}}/>
+                        <Image source={require('../assets/menu1.png')} style={{width: '100%', height: 247}}/>
                     </View>
                 </View>
             </ImageBackground>

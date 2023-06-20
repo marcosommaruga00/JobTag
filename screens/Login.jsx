@@ -54,7 +54,7 @@ export default function Login ({ navigation }) {
                         </StandardButton>
                     </View>
                     <View style={styles.bottom}>
-                        <Image source={require('../assets/menu.png')} style={{width: '100%', height: 247}}/>
+                        <Image source={require('../assets/menu1.png')} style={{width: '100%', height: 247}}/>
                     </View>
                 </View>
             </ImageBackground>
