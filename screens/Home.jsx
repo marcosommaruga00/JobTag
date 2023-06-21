@@ -14,19 +14,19 @@ const ITEM_WIDTH = Dimensions.get("window").width - (OFFSET * 2)
 const ITEM_HEIGHT = 195
 
 const cards = [
-    { id: 0, title: "John Tolentino", posterUrl: require("../assets/persone/persona1.jpg") },
-    { id: 1, title: "Persona 2", posterUrl: require("../assets/persone/persona2.jpg") },
-    { id: 2, title: "Persona 3", posterUrl: require("../assets/persone/persona3.jpg") },
-    { id: 3, title: "Persona 4", posterUrl: require("../assets/persone/persona4.jpg") },
-    { id: 4, title: "Persona 5", posterUrl: require("../assets/persone/persona5.jpg") },
+    { id: 0, title: "Filippo Franchi", posterUrl: require("../assets/persone/persona1.jpg") },
+    { id: 1, title: "Giada Rossi", posterUrl: require("../assets/persone/persona2.jpg") },
+    { id: 2, title: "Giorgio Rivolta", posterUrl: require("../assets/persone/persona3.jpg") },
+    { id: 3, title: "Marco Sommaruga", posterUrl: require("../assets/persone/persona4.jpg") },
+    { id: 4, title: "Matteo Fumagalli", posterUrl: require("../assets/persone/persona5.jpg") },
 ]
 
 const luoghi = [
-    { title: "Luogo 1", posterUrl: require("../assets/luoghi/luogo1.jpg") },
-    { title: "Luogo 2", posterUrl: require("../assets/luoghi/luogo2.jpg") },
-    { title: "Luogo 3", posterUrl: require("../assets/luoghi/luogo3.jpg") },
-    { title: "Luogo 4", posterUrl: require("../assets/luoghi/luogo4.jpg") },
-    { title: "Luogo 5", posterUrl: require("../assets/luoghi/luogo5.jpg") },
+    { title: "Studio", posterUrl: require("../assets/luoghi/luogo1.jpg") },
+    { title: "Cucina", posterUrl: require("../assets/luoghi/luogo2.jpg") },
+    { title: "Camera da letto", posterUrl: require("../assets/luoghi/luogo3.jpg") },
+    { title: "Sala", posterUrl: require("../assets/luoghi/luogo4.jpg") },
+    { title: "Soggiorno", posterUrl: require("../assets/luoghi/luogo5.jpg") },
 ]
 
 export default function Home () {
