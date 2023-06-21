@@ -35,7 +35,7 @@ const BaseText2 = styled.Text`
 `;
 
 const Label = styled.Text `
-    font-family: 'Poppins-Black';
+    font-family: 'Poppins-SemiBold';
     color: #fff;
     text-transform: uppercase;
     text-align: center;

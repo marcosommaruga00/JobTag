@@ -21,6 +21,7 @@ export default function Login ({ navigation }) {
         'Poppins-Regular': require('../assets/fonts/Poppins-Regular.ttf'),
         'Poppins-Medium': require('../assets/fonts/Poppins-Medium.ttf'),
         'Poppins-Black': require('../assets/fonts/Poppins-Black.ttf'),
+        'Poppins-SemiBold': require('../assets/fonts/Poppins-SemiBold.ttf'),
     });
 
     const accedi = () => {
@@ -43,8 +44,8 @@ export default function Login ({ navigation }) {
                     <View style={styles.center}>
                         <Title2>Benvenuto!</Title2>
                         <SafeAreaView>
-                            <Input placeholder="Inserisci l'email" onChangeText={setEmail} />
-                            <Input placeholder="Inserisci la password" onChangeText={setPassword} secureTextEntry={true}/>
+                            <Input placeholder="Email" onChangeText={setEmail} />
+                            <Input placeholder="Password" onChangeText={setPassword} secureTextEntry={true}/>
                         </SafeAreaView>
                         <BaseText2>
                             Password dimenticata?

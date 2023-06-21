@@ -5,7 +5,7 @@ const StandardButton = styled.Pressable`
     width: 324px;
     height: 50px;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 40px;
     margin: 10px;
     justify-content: center;
     `;
