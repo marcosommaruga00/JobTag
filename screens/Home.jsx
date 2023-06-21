@@ -126,7 +126,7 @@ export default function Home () {
                                                         flex: 1,
                                                         resizeMode: "cover",
                                                         justifyContent: "center",
-                                                        shawdoColor: "#142A39",
+                                                        shadowColor: "#142A39",
                                                         shadowOffset: {
                                                             width: 0,
                                                             height: 10,
@@ -198,7 +198,7 @@ export default function Home () {
                                                     flex: 1,
                                                     resizeMode: "cover",
                                                     justifyContent: "center",
-                                                    shawdoColor: "#142A39",
+                                                    shadowColor: "#142A39",
                                                         shadowOffset: {
                                                             width: 0,
                                                             height: 10,
