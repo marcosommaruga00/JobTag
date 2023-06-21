@@ -57,7 +57,7 @@ const QRButton = styled.Pressable`
     padding-left: 0px;
     border-radius: 99px;
     z-index: 999;
-    margin-bottom: -110%;
+    margin-bottom: -113%;
     margin-left: -20px;
     justify-content: center;
     `;
