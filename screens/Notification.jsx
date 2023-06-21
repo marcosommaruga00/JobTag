@@ -30,7 +30,7 @@ export default function Qrcode () {
 
     return (
         <View>
-            <ImageBackground source={require('../assets/bg.png')} style={{width: '100%', height: '100%'}}>
+            <ImageBackground source={require('../assets/bgHome.png')} style={{width: '100%', height: '100%'}}>
                 <View style={styles.container}>
                     <View style={styles.logo} >
                         <Pressable onPress={goToHome}>

@@ -29,7 +29,7 @@ export default function Home () {
 
     return (
         <View>
-            <ImageBackground source={require('../assets/bg.png')} style={{width: '100%', height: '100%'}}>
+            <ImageBackground source={require('../assets/bgHome.png')} style={{width: '100%', height: '100%'}}>
                 <View style={styles.container}>
                     <View style={styles.logo} >
                         <Image source={require('../assets/logoSmall5.png')} style={{width: 138, height: 24, marginTop: 50}}/>

@@ -4,7 +4,7 @@ import { Label, Title, Input, Title2, BaseText2 } from '../components/Text';
 import { StandardButton, IconButton } from "../components/Button";
 import { useFonts } from 'expo-font';
 
-const image = {uri: "../assets/bg.png"};
+const image = {uri: "../assets/bgHome.png"};
 
 export default function Login ({ navigation }) {
     const [email, setEmail] = useState("");

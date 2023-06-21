@@ -34,6 +34,17 @@ const BaseText2 = styled.Text`
     margin: 5px;
 `;
 
+const Indication = styled.Text`
+    font-family: 'Montserrat-SemiBold';
+    font-size: 15px;
+    color: #000;
+    text-align: left;
+    text-transform: none;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    background-color: 'rgba(255, 255, 255, 0)';
+`;
+
 const Label = styled.Text `
     font-family: 'Poppins-SemiBold';
     color: #fff;
@@ -61,4 +72,4 @@ const ComingSoon = styled.Text `
     margin-top: 60px;
     `;
 
-export { Label, Title, Input, BaseText, BaseText2, Title2, ComingSoon }
+export { Label, Title, Input, BaseText, BaseText2, Title2, ComingSoon, Indication }

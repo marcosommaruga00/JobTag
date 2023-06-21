@@ -3,7 +3,7 @@ import { useRef, useState } from "react"
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Entypo } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
-import { BaseText } from '../components/Text';
+import { BaseText, Indication } from '../components/Text';
 import { CallButton, SettingButton, QRButton } from "../components/Button";
 import { useNavigation } from '@react-navigation/native';
 import Prova from "./Prova";
@@ -11,7 +11,7 @@ import Notification from "./Notification";
 
 const OFFSET = 40
 const ITEM_WIDTH = Dimensions.get("window").width - (OFFSET * 2)
-const ITEM_HEIGHT = 190
+const ITEM_HEIGHT = 195
 
 const cards = [
     { id: 0, title: "Persona 1", posterUrl: require("../assets/persone/persona1.jpg") },
@@ -63,7 +63,7 @@ export default function Home () {
 
     return (
         <View>
-            <ImageBackground source={require('../assets/bg.png')} style={{width: '100%', height: '100%'}}>
+            <ImageBackground source={require('../assets/bgHome.png')} style={{width: '100%', height: '100%'}}>
                 <View style={styles.container}>
                     <View style={styles.logo} >
                         <Image source={require('../assets/logoSmall5.png')} style={{width: 138, height: 24, marginTop: 50, backgroundColor: 'transparent'}}/>
@@ -74,8 +74,9 @@ export default function Home () {
                     </View>
                     {/* carosello */}
                     <View style={styles.center}>
-                        <View style={{flex: 2,width: '100%', height: 218}}>
-                            <SafeAreaView style={{ flex: 1, backgroundColor: "transparent" }}>
+                        <View style={{flex: 2,width: '100%', height: 230}}>
+                            <Indication>1. Seleziona una persona</Indication>
+                            <SafeAreaView style={{ flex: 1, backgroundColor: 'rgba(255, 255, 255, 0)' }}>
                                 <ScrollView
                                     horizontal={true}
                                     decelerationRate={"normal"}
@@ -125,9 +126,14 @@ export default function Home () {
                                                         flex: 1,
                                                         resizeMode: "cover",
                                                         justifyContent: "center",
-                                                        borderColor: '#142A39',
-                                                        borderWidth: 1,
-                                                        borderRadius: 7,
+                                                        shawdoColor: "#142A39",
+                                                        shadowOffset: {
+                                                            width: 0,
+                                                            height: 10,
+                                                        },
+                                                        shadowOpacity: 0.3,
+                                                        shadowRadius: 10,
+                                                        elevation: 20,
                                                         }}
                                                         opacity={cards.indexOf(peopleSelected) === idx ? 0.5 : 1}
                                                         imageStyle={{ borderRadius: 6}}
@@ -141,6 +147,7 @@ export default function Home () {
                             </SafeAreaView>
                         </View>
                         <View style={{flex: 2,width: '100%', height: 218}}>
+                            <Indication>2. Seleziona un luogo</Indication>
                             <SafeAreaView style={{ flex: 1, backgroundColor: "transparent" }}>
                                 <ScrollView
                                     horizontal={true}
@@ -191,9 +198,14 @@ export default function Home () {
                                                     flex: 1,
                                                     resizeMode: "cover",
                                                     justifyContent: "center",
-                                                    borderColor: '#142A39',
-                                                    borderWidth: 1,
-                                                    borderRadius: 7,
+                                                    shawdoColor: "#142A39",
+                                                        shadowOffset: {
+                                                            width: 0,
+                                                            height: 10,
+                                                        },
+                                                        shadowOpacity: 0.3,
+                                                        shadowRadius: 10,
+                                                        elevation: 20,
                                                     }}
                                                     opacity={luoghiSelected === idx ? 0.5 : 1}
                                                     imageStyle={{ borderRadius: 6}}
@@ -266,7 +278,7 @@ const styles = StyleSheet.create({
         flex: 2,
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: -100,
+        marginTop: -130,
         marginBottom: 0,
         width: '100%',
         height: 436,
