@@ -39,7 +39,7 @@ export default function Qrcode () {
 
                     {/* View QR Code */}
                     <View style={styles.center}>
-                        <Image source={require('../assets/ScanToClockIn.png')} style={{width: 300, height: 300}}/>
+                        <Image source={require('../assets/qrcode.png')} style={{ width: 300, height: 300}}/>
                     </View>
                     <View style={{flex: 1, width: 300, height: 100, marginTop: -20}}>
                         <BaseText>Ciao, Lavoratore!</BaseText>
