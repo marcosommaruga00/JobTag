@@ -3,7 +3,7 @@ import { useRef, useState } from "react"
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Entypo } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
-import { BaseText, Indication } from '../components/Text';
+import { BaseText, Indication, Undercard } from '../components/Text';
 import { CallButton, SettingButton, QRButton } from "../components/Button";
 import { useNavigation } from '@react-navigation/native';
 import Prova from "./Prova";
@@ -14,7 +14,7 @@ const ITEM_WIDTH = Dimensions.get("window").width - (OFFSET * 2)
 const ITEM_HEIGHT = 195
 
 const cards = [
-    { id: 0, title: "Persona 1", posterUrl: require("../assets/persone/persona1.jpg") },
+    { id: 0, title: "John Tolentino", posterUrl: require("../assets/persone/persona1.jpg") },
     { id: 1, title: "Persona 2", posterUrl: require("../assets/persone/persona2.jpg") },
     { id: 2, title: "Persona 3", posterUrl: require("../assets/persone/persona3.jpg") },
     { id: 3, title: "Persona 4", posterUrl: require("../assets/persone/persona4.jpg") },
@@ -138,7 +138,7 @@ export default function Home () {
                                                         opacity={cards.indexOf(peopleSelected) === idx ? 0.5 : 1}
                                                         imageStyle={{ borderRadius: 6}}
                                                     />
-                                                    <BaseText style={{fontSize: 16, fontWeight: 'bold', color: '#142A39', marginTop: 10, marginLeft: 10}}>{item.title}</BaseText>
+                                                    <Undercard style={{fontSize: 16, fontWeight: 'bold', color: '#142A39', marginTop: 10, marginLeft: 10}}>{item.title}</Undercard>
                                                 </Animated.View>
                                             </Pressable>
                                         )
@@ -210,7 +210,7 @@ export default function Home () {
                                                     opacity={luoghiSelected === idx ? 0.5 : 1}
                                                     imageStyle={{ borderRadius: 6}}
                                                 />
-                                                <BaseText style={{fontSize: 16, fontWeight: 'bold', color: '#142A39', marginTop: 10, marginLeft: 10}}>{item.title} </BaseText>
+                                                <Undercard style={{fontSize: 16, fontWeight: 'bold', color: '#142A39', marginTop: 10, marginLeft: 10}}>{item.title} </Undercard>
                                             </Animated.View>
                                         </Pressable>
                                     )

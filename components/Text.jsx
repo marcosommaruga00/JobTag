@@ -72,4 +72,11 @@ const ComingSoon = styled.Text `
     margin-top: 60px;
     `;
 
-export { Label, Title, Input, BaseText, BaseText2, Title2, ComingSoon, Indication }
+const Undercard = styled.Text `
+    font-family: 'Poppins-Regular';
+    font-size: 10px;
+    color: #142A6E;
+    text-align: center;
+    text-transform: uppercase;
+    `;
+export { Label, Title, Input, BaseText, BaseText2, Title2, ComingSoon, Indication, Undercard }
