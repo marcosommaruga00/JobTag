@@ -5,14 +5,13 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { BaseText } from '../components/Text';
 import { CallButton, SettingButton, QRButton } from "../components/Button";
 import { useNavigation } from '@react-navigation/native';
-import Notification from "./Notification";
 
 export default function Qrcode () {
 
     const navigation = useNavigation();
-    const goToThirdPage = () => {
+    /* const goToThirdPage = () => {
         navigation.navigate('Prova');
-    };
+    }; */
     const goToHome = () => {
         navigation.navigate('Home');
     };
