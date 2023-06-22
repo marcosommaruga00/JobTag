@@ -2,17 +2,16 @@ import { ImageBackground, StyleSheet, View, Image, Pressable } from "react-nativ
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Entypo } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
-import { BaseText, ComingSoon } from '../components/Text';
+import { ComingSoon } from '../components/Text';
 import { CallButton, SettingButton, QRButton } from "../components/Button";
 import { useNavigation } from '@react-navigation/native';
-import Notification from "./Notification";
 
 export default function Qrcode () {
 
     const navigation = useNavigation();
-    const goToThirdPage = () => {
+    /* const goToThirdPage = () => {
         navigation.navigate('Prova');
-    };
+    }; */
     const goToHome = () => {
         navigation.navigate('Home');
     };
