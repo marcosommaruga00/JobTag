@@ -21,10 +21,10 @@ const cards = [
 
 const luoghi = [
     { title: "Hall", posterUrl: require("../assets/luoghi/luogo5.jpg") },
-    { title: "Sala relax", posterUrl: require("../assets/luoghi/luogo1.jpg") },
     { title: "Sala riunioni", posterUrl: require("../assets/luoghi/luogo2.jpg") },
     { title: "Primo piano", posterUrl: require("../assets/luoghi/luogo3.jpg") },
     { title: "Bagni", posterUrl: require("../assets/luoghi/luogo4.jpg") },
+    { title: "Sala relax", posterUrl: require("../assets/luoghi/luogo1.jpg") },
 ]
 
 export default function Home () {
