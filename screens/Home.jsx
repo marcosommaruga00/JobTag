@@ -7,7 +7,7 @@ import { Indication, Undercard } from '../components/Text';
 import { CallButton, SettingButton, QRButton } from "../components/Button";
 import { useNavigation } from '@react-navigation/native';
 
-const OFFSET = 40
+const OFFSET = 80
 const ITEM_WIDTH = Dimensions.get("window").width - (OFFSET * 2)
 const ITEM_HEIGHT = 195
 
