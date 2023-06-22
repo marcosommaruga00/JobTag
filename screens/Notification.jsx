@@ -2,7 +2,7 @@ import { ImageBackground, StyleSheet, View, Image, Pressable } from "react-nativ
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Entypo } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
-import { BaseText, ComingSoon } from '../components/Text';
+import { BaseText, ComingSoon, Indication } from '../components/Text';
 import { CallButton, SettingButton, QRButton } from "../components/Button";
 import { useNavigation } from '@react-navigation/native';
 
@@ -45,7 +45,7 @@ export default function Qrcode () {
 
                     {/* View Notification */}
                     <View style={styles.center}>
-                        <ComingSoon style={{marginTop: -170}}>Cooming Soon</ComingSoon>
+                        <Indication style={{marginTop: -170, textAlign: 'center', marginRight: 20}}>Nessuna notifica presente</Indication>
                     </View>
                 </View>
             </ImageBackground>
