@@ -5,6 +5,7 @@ import { Entypo } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { BaseText, Indication, Undercard } from '../components/Text';
 import { CallButton, SettingButton, QRButton } from "../components/Button";
+import { Carusel } from "../components/Carusel";
 import { useNavigation } from '@react-navigation/native';
 import Prova from "./Prova";
 import Notification from "./Notification";
