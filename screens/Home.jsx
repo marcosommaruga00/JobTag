@@ -140,8 +140,6 @@ export default function Home () {
                                                         }}
                                                         opacity={cards.indexOf(peopleSelected) === idx ? 0.5 : 1}
                                                         imageStyle={{ borderRadius: 6}}
-                                                        /* borderColor={cards.indexOf(peopleSelected) === idx ? '#30D158' : 'transparent'}
-                                                        borderWidth={cards.indexOf(peopleSelected) === idx ? 2 : 0} */
                                                     />
                                                     <Undercard style={{fontSize: 16, fontWeight: 'bold', color: '#142A39', marginTop: 10, marginLeft: 10}}>{item.title}</Undercard>
                                                 </Animated.View>
