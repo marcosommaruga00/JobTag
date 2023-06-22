@@ -7,16 +7,16 @@ import { Indication, Undercard } from '../components/Text';
 import { CallButton, SettingButton, QRButton } from "../components/Button";
 import { useNavigation } from '@react-navigation/native';
 
-const OFFSET = 80
+const OFFSET = 90
 const ITEM_WIDTH = Dimensions.get("window").width - (OFFSET * 2)
 const ITEM_HEIGHT = 195
 
 const cards = [
-    { id: 0, title: "Filippo Franchi", posterUrl: require("../assets/persone/persona1.jpg") },
-    { id: 1, title: "Giada Rossi", posterUrl: require("../assets/persone/persona2.jpg") },
-    { id: 2, title: "Giorgio Rivolta", posterUrl: require("../assets/persone/persona3.jpg") },
-    { id: 3, title: "Marco Sommaruga", posterUrl: require("../assets/persone/persona4.jpg") },
-    { id: 4, title: "Matteo Fumagalli", posterUrl: require("../assets/persone/persona5.jpg") },
+    { id: 0, title: "Filippo Franchi", description: "Art Director" ,posterUrl: require("../assets/persone/persona1.jpg") },
+    { id: 1, title: "Giada Rossi", description: "Designer", posterUrl: require("../assets/persone/persona2.jpg") },
+    { id: 2, title: "Giorgio Rivolta", description: "CTO", posterUrl: require("../assets/persone/persona3.jpg") },
+    { id: 3, title: "Marco Sommaruga", description: "Dev", posterUrl: require("../assets/persone/persona4.jpg") },
+    { id: 4, title: "Matteo Fumagalli", description: "Tester", posterUrl: require("../assets/persone/persona5.jpg") },
 ]
 
 const luoghi = [
@@ -141,7 +141,8 @@ export default function Home () {
                                                         opacity={cards.indexOf(peopleSelected) === idx ? 0.5 : 1}
                                                         imageStyle={{ borderRadius: 6}}
                                                     />
-                                                    <Undercard style={{fontSize: 16, fontWeight: 'bold', color: '#142A39', marginTop: 10, marginLeft: 10}}>{item.title}</Undercard>
+                                                    <Undercard style={{fontSize: 16, fontWeight: 'bold', color: '#142A39', marginTop: 10}}>{item.title}</Undercard>
+                                                    <Undercard style={{fontSize: 10, color: '#142A39', marginBottom: -5}}>{item.description}</Undercard>
                                                 </Animated.View>
                                             </Pressable>
                                         )
