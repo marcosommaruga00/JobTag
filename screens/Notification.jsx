@@ -1,21 +1,18 @@
 import { ImageBackground, StyleSheet, View, Image, Pressable } from "react-native";
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { Entypo } from '@expo/vector-icons';
-import { MaterialIcons } from '@expo/vector-icons';
 import { BaseText, ComingSoon, Indication } from '../components/Text';
-import { CallButton, SettingButton, QRButton } from "../components/Button";
 import { useNavigation } from '@react-navigation/native';
 
 export default function Qrcode () {
 
     const navigation = useNavigation();
-    const goToThirdPage = () => {
+    /* const goToThirdPage = () => {
         navigation.navigate('Prova');
-    };
+    }; */
     const goToHome = () => {
         navigation.navigate('Home');
     };
-    const goToNotification = () => {
+    /* const goToNotification = () => {
         navigation.navigate('Notification');
     };
     const goToQrcode = () => {
@@ -23,7 +20,7 @@ export default function Qrcode () {
     };
     const goToSettings = () => {
         navigation.navigate('Settings');
-    };
+    }; */
     const goToBack = () => {
         navigation.goBack();
     };
