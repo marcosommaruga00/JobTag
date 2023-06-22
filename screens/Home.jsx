@@ -12,19 +12,19 @@ const ITEM_WIDTH = Dimensions.get("window").width - (OFFSET * 2)
 const ITEM_HEIGHT = 195
 
 const cards = [
-    { id: 0, title: "Filippo Franchi", description: "Art Director" ,posterUrl: require("../assets/persone/persona1.jpg") },
-    { id: 1, title: "Giada Rossi", description: "Designer", posterUrl: require("../assets/persone/persona2.jpg") },
-    { id: 2, title: "Giorgia Rivolta", description: "CTO", posterUrl: require("../assets/persone/persona3.jpg") },
-    { id: 3, title: "Pietro Brambilla", description: "Dev", posterUrl: require("../assets/persone/persona4.jpg") },
-    { id: 4, title: "Matteo Fumagalli", description: "Tester", posterUrl: require("../assets/persone/persona5.jpg") },
+    { id: 0, title: "Filippo Franchi", description: "Art Director" ,posterUrl: require("../assets/persone/persona1.1.jpg") },
+    { id: 1, title: "Giada Rossi", description: "Designer", posterUrl: require("../assets/persone/persona1.2.jpg") },
+    { id: 2, title: "Giorgia Rivolta", description: "CTO", posterUrl: require("../assets/persone/persona1.3.jpg") },
+    { id: 3, title: "Pietro Brambilla", description: "Dev", posterUrl: require("../assets/persone/persona1.4.jpg") },
+    { id: 4, title: "Matteo Fumagalli", description: "Tester", posterUrl: require("../assets/persone/persona1.5.jpg") },
 ]
 
 const luoghi = [
-    { title: "Hall", posterUrl: require("../assets/luoghi/luogo5.jpg") },
-    { title: "Sala riunioni", posterUrl: require("../assets/luoghi/luogo2.jpg") },
-    { title: "Primo piano", posterUrl: require("../assets/luoghi/luogo3.jpg") },
-    { title: "Bagni", posterUrl: require("../assets/luoghi/luogo4.jpg") },
-    { title: "Sala relax", posterUrl: require("../assets/luoghi/luogo1.jpg") },
+    { title: "Hall", posterUrl: require("../assets/luoghi/luogo1.5.jpg") },
+    { title: "Sala riunioni", posterUrl: require("../assets/luoghi/luogo1.2.jpg") },
+    { title: "Primo piano", posterUrl: require("../assets/luoghi/luogo1.3.jpg") },
+    { title: "Bagni", posterUrl: require("../assets/luoghi/luogo1.4.jpg") },
+    { title: "Sala relax", posterUrl: require("../assets/luoghi/luogo1.1.jpg") },
 ]
 
 export default function Home () {
