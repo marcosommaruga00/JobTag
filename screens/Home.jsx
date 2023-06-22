@@ -3,12 +3,9 @@ import { useRef, useState } from "react"
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Entypo } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
-import { BaseText, Indication, Undercard } from '../components/Text';
+import { Indication, Undercard } from '../components/Text';
 import { CallButton, SettingButton, QRButton } from "../components/Button";
-import { Carusel } from "../components/Carusel";
 import { useNavigation } from '@react-navigation/native';
-import Prova from "./Prova";
-import Notification from "./Notification";
 
 const OFFSET = 40
 const ITEM_WIDTH = Dimensions.get("window").width - (OFFSET * 2)
@@ -31,6 +28,7 @@ const luoghi = [
 ]
 
 export default function Home () {
+
     const [peopleSelected, setPeopleSelected] = useState(null)
     const [luoghiSelected, setLuoghiSelected] = useState(null)
     const scrollX = useRef(new Animated.Value(0)).current
@@ -66,6 +64,7 @@ export default function Home () {
         <View>
             <ImageBackground source={require('../assets/bgHome.png')} style={{width: '100%', height: '100%'}}>
                 <View style={styles.container}>
+                    {/* Top bar */}
                     <View style={styles.logo} >
                         <Image source={require('../assets/logoSmall5.png')} style={{width: 138, height: 24, marginTop: 50, backgroundColor: 'transparent'}}/>
                         {/* View icon notification */}
@@ -221,7 +220,7 @@ export default function Home () {
                         </View>
                     </View>
 
-                    {/* TabBar */}
+                    {/* Tab bar */}
                     <View style={styles.bottom}>
 
                         {/* View icon settings */}
@@ -285,6 +284,3 @@ const styles = StyleSheet.create({
         height: 436,
     },
 });
-
-/* backgroundColor={'#30D158'} borderRadius={999} color="white" iconStyle={{paddingLeft: 2}}  */
-/* style={{ zIndex: 3, marginBottom: -98}} */
