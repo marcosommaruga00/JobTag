@@ -7,7 +7,7 @@
     "icon": "./assets/Appicon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/Loading1.jpg",
+      "image": "./assets/Loading2.png",
       "resizeMode": "cover"
     },
     "assetBundlePatterns": [
@@ -15,12 +15,6 @@
     ],
     "ios": {
       "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-Appicon.png",
-        "backgroundColor": "#ffffff"
-      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
