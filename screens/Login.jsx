@@ -1,7 +1,7 @@
 import { StyleSheet, View, ImageBackground, Image, SafeAreaView, TextInput} from "react-native";
 import {useState} from "react"
-import { Label, Title, Input, Title2, BaseText2 } from '../components/Text';
-import { StandardButton, IconButton } from "../components/Button";
+import { Label, Input, Title2, BaseText2 } from '../components/Text';
+import { StandardButton } from "../components/Button";
 import { useFonts } from 'expo-font';
 
 const image = {uri: "../assets/bgHome.png"};
