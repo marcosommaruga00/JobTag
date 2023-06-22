@@ -14,17 +14,17 @@ const ITEM_HEIGHT = 195
 const cards = [
     { id: 0, title: "Filippo Franchi", description: "Art Director" ,posterUrl: require("../assets/persone/persona1.jpg") },
     { id: 1, title: "Giada Rossi", description: "Designer", posterUrl: require("../assets/persone/persona2.jpg") },
-    { id: 2, title: "Giorgio Rivolta", description: "CTO", posterUrl: require("../assets/persone/persona3.jpg") },
-    { id: 3, title: "Marco Sommaruga", description: "Dev", posterUrl: require("../assets/persone/persona4.jpg") },
+    { id: 2, title: "Giorgia Rivolta", description: "CTO", posterUrl: require("../assets/persone/persona3.jpg") },
+    { id: 3, title: "Pietro Brambilla", description: "Dev", posterUrl: require("../assets/persone/persona4.jpg") },
     { id: 4, title: "Matteo Fumagalli", description: "Tester", posterUrl: require("../assets/persone/persona5.jpg") },
 ]
 
 const luoghi = [
-    { title: "Studio", posterUrl: require("../assets/luoghi/luogo1.jpg") },
-    { title: "Cucina", posterUrl: require("../assets/luoghi/luogo2.jpg") },
-    { title: "Camera da letto", posterUrl: require("../assets/luoghi/luogo3.jpg") },
-    { title: "Sala", posterUrl: require("../assets/luoghi/luogo4.jpg") },
-    { title: "Soggiorno", posterUrl: require("../assets/luoghi/luogo5.jpg") },
+    { title: "Hall", posterUrl: require("../assets/luoghi/luogo5.jpg") },
+    { title: "Sala relax", posterUrl: require("../assets/luoghi/luogo1.jpg") },
+    { title: "Sala riunioni", posterUrl: require("../assets/luoghi/luogo2.jpg") },
+    { title: "Primo piano", posterUrl: require("../assets/luoghi/luogo3.jpg") },
+    { title: "Bagni", posterUrl: require("../assets/luoghi/luogo4.jpg") },
 ]
 
 export default function Home () {
