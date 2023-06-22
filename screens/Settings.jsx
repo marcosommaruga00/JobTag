@@ -1,9 +1,16 @@
+/* 
+three sections: Preferiti, Gruppi, Logout
+with three icons: back, back and logout
+the style of this sections is: width 100%, height 75px, background-color: rgba(255, 255, 255, 0), and justify-content: space-between for the three icons, this three sections are one above the other and they are separeted by a line, they are in the View with styles.center of the top and they are fixed under the header.
+*/
+
 import { ImageBackground, StyleSheet, View, Image, Pressable } from "react-native";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Entypo } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
-import { ComingSoon } from '../components/Text';
-import { CallButton, SettingButton, QRButton } from "../components/Button";
+import { SimpleLineIcons } from '@expo/vector-icons';
+import { ComingSoon, Indication } from '../components/Text';
+import { CallButton, SettingButton, QRButton, PreferitiButton } from "../components/Button";
 import { useNavigation } from '@react-navigation/native';
 
 export default function Qrcode () {
@@ -24,6 +31,9 @@ export default function Qrcode () {
     const goToSettings = () => {
         navigation.navigate('Settings');
     };
+    const goToLogin = () => {
+        navigation.navigate('Login');
+    };
 
     return (
         <View>
@@ -38,7 +48,23 @@ export default function Qrcode () {
 
                     {/* View Settings */}
                     <View style={styles.center}>
-                        <ComingSoon>Coming soon</ComingSoon>
+                        <View style={{flex: 1, flexDirection: 'column', alignItems: 'center', width: 320, backgroundColor: 'rgba(255, 255, 255, 0)', zIndex: 2, marginTop: 40, marginRight: -20}}>
+                            <PreferitiButton onPress={() => navigation.navigate("Settings")}>
+                                <Indication style={{marginBottom: 0, marginLeft: 0}} >Preferiti</Indication>
+                                <Ionicons.Button name="chevron-forward" size={24} backgroundColor={'rgba(255, 255, 255, 0)'} color="#142A39" iconStyle={{paddingLeft: 2}} onPress={goToSettings}/>
+                            </PreferitiButton>
+                            <View style={{ width: '95%',height: 1, backgroundColor: '#142A39', marginRight: 20}} />
+                            <PreferitiButton onPress={() => navigation.navigate("Settings")}>
+                                <Indication style={{marginBottom: 0, marginLeft: 0}} >Gruppi</Indication>
+                                <Ionicons.Button name="chevron-forward" size={24} backgroundColor={'rgba(255, 255, 255, 0)'} color="#142A39" iconStyle={{paddingLeft: 2}} onPress={goToSettings}/>
+                            </PreferitiButton>
+                            <View style={{ width: '95%',height: 1, backgroundColor: '#142A39', marginRight: 20}} />
+                            <PreferitiButton onPress={() => navigation.navigate("Login")}>
+                                <Indication style={{marginBottom: 0, marginLeft: 0}} >Logout</Indication>
+                                <SimpleLineIcons.Button name="logout" size={24} backgroundColor={'rgba(255, 255, 255, 0)'} color="#142A39" iconStyle={{paddingLeft: 2, transform: [{rotateY: '180deg'}]}} onPress={goToLogin}/>
+                            </PreferitiButton>
+
+                        </View>
                     </View>
                     <View style={styles.bottom}>
 
@@ -96,8 +122,8 @@ const styles = StyleSheet.create({
     center:{
         flex: 2,
         alignItems: 'center',
-        justifyContent: 'center',
-        marginTop: 0,
+        justifyContent: 'start',
+        marginTop: -100,
         marginBottom: 200,
         width: 300,
         height: 436,

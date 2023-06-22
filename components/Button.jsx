@@ -62,3 +62,14 @@ const QRButton = styled.Pressable`
     justify-content: center;
     `;
 export { QRButton };
+
+const PreferitiButton = styled.Pressable`
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0);
+    width: 100%;
+    height: 50px;
+    z-index: 999;
+    align-items: center;
+    justify-content: space-between;
+    `;
+export { PreferitiButton };
