@@ -36,7 +36,7 @@ export default function Home () {
 
     const call = () => {
         if(peopleSelected != null && luoghiSelected != null){
-            return alert(`Chiamata inviata!\n ${peopleSelected.title} è stato avvisato.`)
+            return alert(`Chiamata inviata!\n ${peopleSelected.title} arriverà il prima possibile.`)
         } else if (peopleSelected == null && luoghiSelected != null || peopleSelected != null && luoghiSelected == null || peopleSelected == null && luoghiSelected == null){ 
             return alert('Seleziona una persona e un luogo per effettuare la chiamata!') 
         }
