@@ -44,12 +44,12 @@ export default function Home () {
     }
 
     const navigation = useNavigation();
-    const goToThirdPage = () => {
+    /* const goToThirdPage = () => {
         navigation.navigate('Prova');
     };
     const goToHome = () => {
         navigation.navigate('Home');
-    };
+    }; */
     const goToNotification = () => {
         navigation.navigate('Notification');
     };
