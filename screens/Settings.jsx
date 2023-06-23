@@ -1,9 +1,3 @@
-/* 
-three sections: Preferiti, Gruppi, Logout
-with three icons: back, back and logout
-the style of this sections is: width 100%, height 75px, background-color: rgba(255, 255, 255, 0), and justify-content: space-between for the three icons, this three sections are one above the other and they are separeted by a line, they are in the View with styles.center of the top and they are fixed under the header.
-*/
-
 import { ImageBackground, StyleSheet, View, Image, Pressable } from "react-native";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Entypo } from '@expo/vector-icons';
