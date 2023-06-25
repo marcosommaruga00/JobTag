@@ -25,7 +25,7 @@ export default function Login ({ navigation }) {
     });
 
     const accedi = () => {
-        if (email != "prova@prova.it" && password != "prova" || email == "" && password == "" || email == "prova@prova.it" && password != "prova" || email != "prova@prova.it" && password == "prova") {
+        if (email != "Admin" && password != "admin" || email == "" && password == "" || email == "Admin" && password != "admin" || email != "Admin" && password == "admin") {
             alert("Email e password errati");
         } else {
             navigation.navigate("Home");
