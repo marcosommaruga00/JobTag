@@ -41,7 +41,7 @@ export default function Qrcode () {
                         <Image source={require('../assets/qrcode.png')} style={{ width: 300, height: 300}}/>
                     </View>
                     <View style={{flex: 1, width: 300, height: 100, marginTop: -20}}>
-                        <BaseText>Ciao, Lavoratore!</BaseText>
+                        <BaseText>Ciao Lavoratore!</BaseText>
                         <BaseText style={{marginTop: 5, textTransform: 'none' }}>
                             Scannerizza il
                         </BaseText>
