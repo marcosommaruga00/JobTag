@@ -25,7 +25,7 @@ export default function Login ({ navigation }) {
     });
 
     const accedi = () => {
-        if (email != "Admin" && password != "admin" || email == "" && password == "" || email == "Admin" && password != "admin" || email != "Admin" && password == "admin") {
+        if (email != "admin" && password != "admin" || email == "" && password == "" || email == "admin" && password != "admin" || email != "admin" && password == "admin") {
             alert("Email e password errati");
         } else {
             navigation.navigate("Home");
